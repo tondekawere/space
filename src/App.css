@@ -1,38 +1,604 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header .header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position: absolute;
+  top: 2%;
+  padding: 2% 2%;
+}
+
+header img {
+  width: 50%;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  list-style: none;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  header {
+    width: 95%;
+  }
+
+  header .header-inner img {
+    width: 90%;
+  }
+
+  header .header-inner ul {
+    gap: 5%;
+  }
+
+  header .header-inner ul li a {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .header-inner ul li a {
+    font-size: 20px;
+  }
+}
+
+.hero {
+  background-image: url(../public/images/header.jpg);
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-inner h1 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  padding-bottom: 2%;
+}
+
+@media (min-width: 768px) {
+  .hero .hero-inner h1 {
+    font-size: 35px;
+  }
+
+  .hero .hero-inner p {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 968px) {
+  .hero .hero-inner h1 {
+    font-size: 47px;
+  }
+
+  .hero .hero-inner p {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero .hero-inner h1 {
+    font-size: 35px;
+    padding-top: 0%;
+    padding-bottom: 0;
+  }
+
+  .hero .hero-inner p {
+    font-size: 20px;
+  }
+}
+
+.about {
+  padding: 10% 5%;
+}
+
+.about .about-inner h2 {
+  font-size: 20px;
+  padding: 4% 0 2% 0;
+  font-weight: 500;
+}
+
+.about .about-inner p {
+  font-size: 15px;
+  color: rgba(123, 123, 123, 0.8235294118);
+}
+
+@media (min-width: 768px) {
+  .about {
+    text-align: center;
+  }
+
+  .about .about-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+  }
+
+  .about .about-inner h2 {
+    padding-bottom: 7%;
+    font-size: 25px;
+  }
+
+  .about .about-inner p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 968px) {
+  .about .about-inner h2 {
+    font-size: 37px;
+  }
+
+  .about .about-inner p {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    padding: 7% 0;
+  }
+
+  .about .about-inner {
+    padding: 0 7%;
+    gap: 4%;
+  }
+
+  .about .about-inner h2 {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.5254901961);
+    font-weight: 800;
+  }
+
+  .about .about-inner p {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5764705882);
+  }
+}
+
+.services {
+  background: rgba(223, 223, 223, 0.3882352941);
+}
+
+.services .services-inner {
+  padding: 5%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.services .services-inner img {
+  width: 60%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.services .services-inner h2 {
+  padding: 2% 0 4% 0;
+  color: rgba(0, 0, 0, 0.8235294118);
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.services .services-inner p {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.8117647059);
+  font-weight: normal;
+  padding-bottom: 5%;
+}
+
+.services .services-inner button {
+  background: rgba(255, 123, 0, 0.605);
+  width: 40%;
+  padding: 5% 0%;
+  border: none;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .services .services-inner h2 {
+    font-size: 25px;
+  }
+
+  .services .services-inner p {
+    font-size: 20px;
+  }
+
+  .services .services-inner button {
+    font-size: 20px;
+    font-weight: 800;
+    width: 30%;
+    padding: 3% 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (min-width: 992px) {
+  .services .services-inner {
+    padding: 2% 5%;
+  }
+
+  .services .services-inner img {
+    width: 50%;
+  }
+
+  .services .services-inner button {
+    width: 20%;
+    padding: 2%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services .services-inner img {
+    width: 40%;
+  }
+
+  .services .services-inner h2 {
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.5450980392);
+  }
+
+  .services .services-inner p {
+    font-size: 15px;
+    padding: 0 10% 2% 10%;
+    color: rgba(0, 0, 0, 0.5490196078);
+  }
+
+  .services .services-inner button {
+    width: 17%;
+    font-size: 17px;
+    padding: 1.3% 0;
+  }
+}
+
+.blog {
+  text-align: center;
+  padding: 10% 5%;
+}
+
+.blog h2 {
+  font-weight: 800;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.9019607843);
+  padding-bottom: 10%;
+}
+
+.blog .blog-inner {
+  background: rgba(237, 237, 237, 0.311);
+  padding: 7% 5%;
+  text-align: left;
+}
+
+.blog .blog-inner p {
+  color: rgba(0, 0, 0, 0.6549019608);
+  padding-bottom: 3%;
+}
+
+.blog .blog-inner h6 {
+  padding-bottom: 5%;
+  font-weight: 800;
+  font-size: 11px;
+}
+
+@media (min-width: 768px) {
+  .blog h2 {
+    font-size: 35px;
+  }
+
+  .blog .blog-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+  }
+
+  .blog .blog-inner p {
+    font-size: 18px;
+  }
+
+  .blog .blog-inner h6 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog {
+    padding: 7% 4% 3% 4%;
+  }
+
+  .blog h2 {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 2%;
+    color: rgba(0, 0, 0, 0.6431372549);
+  }
+
+  .blog .blog-inner {
+    padding: 5% 4%;
+    gap: 4%;
+  }
+
+  .blog .blog-inner p {
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.3529411765);
+    font-weight: 400;
+  }
+
+  .blog .blog-inner h6 {
+    padding-top: 2%;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.3450980392);
+  }
+}
+
+.contact {
+  background: rgba(241, 134, 4, 0.76);
+  text-align: center;
+  padding: 10% 0;
+}
+
+.contact .contact-inner h2 {
+  color: #fff;
+  font-weight: 700;
+  padding-bottom: 3%;
+}
+
+.contact .contact-inner input[type=name] {
+  border: none;
+  border-radius: 20px 0 0 20px;
+  width: 20%;
+  padding: 3%;
+}
+
+.contact .contact-inner input[placeholder=name] {
+  text-align: right;
+}
+
+.contact .contact-inner input[type=email] {
+  border: none;
+  border-radius: 0 20px 20px 0;
+  width: 20%;
+  padding: 3%;
+}
+
+.contact .contact-inner input[type=button] {
+  border: none;
+  border-radius: 20px;
+  background: rgba(36, 36, 36, 0.815);
+  color: #fff;
+  font-weight: 800;
+  width: 30%;
+  padding: 3%;
+}
+
+@media (min-width: 768px) {
+  .contact .contact-inner h2 {
+    font-size: 35px;
+  }
+
+  .contact .contact-inner input[type=name] {
+    border-radius: 35px 0 0 35px;
+    width: 18%;
+    padding: 3%;
+  }
+
+  .contact .contact-inner input[placeholder=name] {
+    font-size: 20px;
+  }
+
+  .contact .contact-inner input[type=email] {
+    border-radius: 0 35px 35px 0;
+    width: 18%;
+    padding: 3%;
+  }
+
+  .contact .contact-inner input[placeholder=email] {
+    font-size: 20px;
+  }
+
+  .contact .contact-inner input[type=button] {
+    border-radius: 35px;
+    width: 25%;
+    padding: 3%;
+  }
+
+  .contact .contact-inner input[value=Subscribe] {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact .contact-inner input[type=name] {
+    border-radius: 40px 0 0 40px;
+    width: 18%;
+    padding: 3%;
+  }
+
+  .contact .contact-inner input[type=email] {
+    border-radius: 0 40px 40px 0;
+    width: 18%;
+    padding: 3%;
+  }
+
+  .contact .contact-inner input[type=button] {
+    border-radius: 50px;
+    width: 23%;
+    padding: 3%;
+    margin-left: 2%;
+  }
+
+  .contact .contact-inner input[value=Subscribe] {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    padding: 5% 0;
+  }
+
+  .contact .contact-inner h2 {
+    font-size: 31px;
+    padding-bottom: 1%;
+  }
+
+  .contact .contact-inner input[type=name] {
+    border-radius: 50px 0 0 50px;
+    width: 9%;
+    padding: 1%;
+  }
+
+  .contact .contact-inner input[placeholder=name] {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .contact .contact-inner input[type=email] {
+    border-radius: 0 50px 50px 0;
+    width: 9%;
+    padding: 1%;
+  }
+
+  .contact .contact-inner input[placeholder=email] {
+    font-size: 12px;
+  }
+
+  .contact .contact-inner input[type=button] {
+    border-radius: 50px;
+    width: 11%;
+    padding: 1%;
+    margin-left: 1%;
+  }
+
+  .contact .contact-inner input[value=Subscribe] {
+    font-size: 15px;
+  }
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.708);
+  text-align: center;
+}
+
+footer img {
+  width: 25%;
+  padding: 10% 0 5% 0;
+}
+
+footer ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 2%;
 }
 
-.App-link {
-  color: #61dafb;
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer hr {
+  margin: 0 auto;
+  width: 70%;
+  border-color: rgba(0, 0, 0, 0.1215686275);
+}
+
+footer p {
+  font-size: 12px;
+  padding-bottom: 3%;
+  color: #ffffff;
+}
+
+footer p a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7137254902);
+}
+
+@media (min-width: 768px) {
+  footer ul li a {
+    font-size: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  footer p {
+    font-size: 17px;
+    padding-top: 3%;
   }
 }
+
+@media (min-width: 992px) {
+  footer img {
+    width: 15%;
+  }
+
+  footer hr {
+    width: 40%;
+    margin-top: 2%;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer img {
+    padding: 5% 0 2% 0;
+    width: 3%;
+  }
+
+  footer ul {
+    gap: 2%;
+  }
+
+  footer ul li a {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5529411765);
+    font-weight: 800;
+  }
+
+  footer hr {
+    width: 30%;
+    border-color: rgba(0, 0, 0, 0.1215686275);
+  }
+
+  footer p {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 1% 0 5% 0;
+    color: rgba(255, 255, 255, 0.5529411765);
+  }
+
+  footer p a {
+    color: rgba(136, 136, 136, 0.5607843137);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
